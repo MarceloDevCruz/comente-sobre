@@ -1,0 +1,37 @@
+<section>
+  <div class="dashboard">
+    <div class="container col-3 justify-contente-between center">
+      <h2>Seu Dashboard</h2>
+      <a href="/comentesobre/add" class="btn btn-primary btn-lg">Criar Post</a>
+    </div>
+
+  </div>
+  <div class="container">
+    <h3>Seus posts</h3>
+
+    {{#each comentesobres}}
+    <div class="card margin-bottom">
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.commentary}}</p>
+        <div class="flex-buttons">
+          <a href="/comentesobre/edit/{{this.id}}" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
+          <form action="/comentesobre/remove" method="POST">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <div>
+      {{#if isEmpty}}
+      <div class="card margin-bottom">
+        <div class="card-body center">
+          <p>Você ainda não tem posts</p>
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

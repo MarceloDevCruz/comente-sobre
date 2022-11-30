@@ -1,0 +1,44 @@
+<main>
+  <div class="container col-10">
+
+    <form action="/" method="GET">
+      <div class="flex-form">
+        <input type="text" name="search" class="form-control" id="search" placeholder="Busque por comentários">
+        <input type="submit" value="Buscar" class="btn btn-outline-primary">
+      </div>
+    </form>
+
+    <div class="flex-form">
+      <p>Ordernar por:</p>
+      <form action="/" method="GET">
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="new">
+        <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-arrow-up"></i></button>
+      </form>
+
+      <form action="/" method="GET">
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="old">
+        <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-arrow-down"></i></button>
+      </form>
+      <a class="btn btn-outline-secondary" href="/">Limpar</a>
+    </div>
+    {{#if search}}
+    <p class="fs-3">Busca por: <span class="text-primary">{{search}}</span></p>
+    <p class="fs-5"><span class="text-primary">{{searchQtdResults}} </span>resultados para a busca</p>
+
+    {{else}}
+    <h1>Comente Sobre</h1>
+    {{/if}}
+
+    {{#each date}}
+    <div class="card small-margin">
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Por: {{this.User.name}}</h6>
+        <p class="card-text">{{this.commentary}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</main>

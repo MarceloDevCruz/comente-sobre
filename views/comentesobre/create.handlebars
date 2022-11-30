@@ -1,0 +1,16 @@
+<div class="container col-8 margin-top">
+  <h3 class="text-primary">O que você quer compartilhar hoje?</h3>
+  <form action="/comentesobre/add" method="POST" class="container col-8 margin-top">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" class="form-control" name="title" placeholder="Insira um texto" required>
+    </div>
+    <div class="mb-3">
+      <label for="comentario" class="form-label">Comentário:</label>
+      <textarea class="form-control" name="commentary" rows="6" placeholder="Faça seu comentário!" required></textarea>
+    </div>
+    <div class="mb-3">
+      <input type="submit" value="Comentar" class="btn btn-primary"></input>
+    </div>
+  </form>
+</div>

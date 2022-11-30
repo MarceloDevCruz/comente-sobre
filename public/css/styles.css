@@ -1,0 +1,90 @@
+nav {
+  min-height: 10vh;
+}
+
+.navbar {
+  border-bottom: solid 1px #2E2E2E;
+}
+
+.logo-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo-flex,
+.link-content {
+  padding: 0 2em;
+}
+
+
+footer {
+  max-height: 20vh;
+  border-top: solid 1px #2E2E2E;
+
+}
+
+.margin-bottom {
+  margin-bottom: 2em;
+}
+
+.margin-top {
+  margin: 4em auto;
+}
+
+.margin-top button {
+  margin-bottom: 1em;
+}
+
+.margin-top p {
+  margin-bottom: 4em;
+}
+
+.center-message {
+  margin: 4em auto;
+  text-align: center;
+}
+
+.dashboard {
+  margin: 6em auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container h3 {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center h2 {
+  margin-bottom: 2rem;
+}
+
+.flex-buttons {
+  display: flex;
+  gap: .5em;
+}
+
+.small-margin {
+  margin: .8em;
+}
+
+main div h1 {
+  text-align: center;
+  margin: .6em;
+}
+
+.flex-form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 1em;
+  gap: 1em;
+}
