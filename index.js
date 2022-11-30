@@ -8,6 +8,8 @@ const app = express()
 
 const conn = require('./db/conn')
 
+const port = process.env.PORT || 3000
+
 /* MODELS */
 const ComenteSobre = require('./models/ComenteSobre')
 const User = require('./models/User')
@@ -68,4 +70,4 @@ app.use('/', AuthRoutes)
 app.get('/', comenteSobreController.showComenteSobre)
 
 // .sync({ force: true })
-conn.sync().then(() => { app.listen(3000) }).catch((err) => console.log('err'))
+conn.sync().then(() => { app.listen(port) }).catch((err) => console.log('err'))
